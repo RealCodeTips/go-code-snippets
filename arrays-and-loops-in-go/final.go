@@ -1,3 +1,5 @@
+// https://www.codetips.co.uk/languages/go/arrays-and-loops-in-go/
+
 package main
 
 import "log"
