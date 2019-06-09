@@ -1,3 +1,5 @@
+// https://www.codetips.co.uk/languages/go/conditionals-in-go/
+
 package main
 
 import "log"
