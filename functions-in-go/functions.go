@@ -12,27 +12,63 @@ func main() {
 
 	// Start of our code
 
-	name := "Simon"
-	age := 29
-	hobbies := [4]string{"example1", "mountain biking", "example2", "example3"}
+	myName := "Simon"
+	myAge := 29
 
-	log.Printf("Hello World. My name is %s.", name)
+	friendOneName := "David"
+	friendOneAge := 17
 
-	if age < 13 {
+	friendTwoName := "Bill"
+	friendTwoAge := 42
+
+	// friendThreeName := "Charlie"
+	// friendThreeAge := 12
+
+	// friendFourName := "Abby"
+	// friendFourAge := 24
+
+	// friendFiveName := "Edith"
+	// friendFiveAge := 74
+	
+	log.Printf("Hello World. My name is %s.", myName)
+
+	if myAge < 13 {
 		log.Println("I am considered a child")
-	} else if age >= 13 && age < 20 {
+	} else if myAge >= 13 && myAge < 20 {
 		log.Println("I am considered a teenager")
-	} else if age >= 20 && age < 70 {
+	} else if myAge >= 20 && myAge < 70 {
 		log.Println("I am considered an adult")
 	} else {
 		log.Println("I am considered a pensioner")
 	}
 
-	log.Printf("I have %d hobbies, and they are: ", len(hobbies))
+	log.Println("I have two friends, and they are as follows:")
 
-	for i := 0; i < len(hobbies); i++ {
-		log.Println(hobbies[i])
+	log.Printf("%s: ", friendOneName)
+
+	if friendOneAge < 13 {
+		log.Println("They are considered a child")
+	} else if friendOneAge >= 13 && friendOneAge < 20 {
+		log.Println("They are considered a teenager")
+	} else if friendOneAge >= 20 && friendOneAge < 70 {
+		log.Println("They are considered an adult")
+	} else {
+		log.Println("They are considered a pensioner")
 	}
+
+	log.Printf("%s: ", friendTwoName)
+
+	if friendTwoAge < 13 {
+		log.Println("They are considered a child")
+	} else if friendTwoAge >= 13 && friendTwoAge < 20 {
+		log.Println("They are considered a teenager")
+	} else if friendTwoAge >= 20 && friendTwoAge < 70 {
+		log.Println("They are considered an adult")
+	} else {
+		log.Println("They are considered a pensioner")
+	}
+
+
 
 	// End of our code
 
