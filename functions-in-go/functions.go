@@ -1,11 +1,21 @@
-// https://www.codetips.co.uk/languages/go/conditionals-in-go/
+// https://www.codetips.co.uk/languages/go/functions-in-go/
 
 package main
 
 import "log"
 
-func ageToAgeBracket(age int) string {
-	return ""
+func printAgeBracket(name string, age int) {
+	log.Printf("%s: ", name)
+
+	if age < 13 {
+		log.Println("I am considered a child")
+	} else if age < 20 {
+		log.Println("I am considered a teenager")
+	} else if age < 70 {
+		log.Println("I am considered an adult")
+	} else {
+		log.Println("I am considered a pensioner")
+	}
 }
 
 func main() {
@@ -21,54 +31,34 @@ func main() {
 	friendTwoName := "Bill"
 	friendTwoAge := 42
 
-	// friendThreeName := "Charlie"
-	// friendThreeAge := 12
+	friendThreeName := "Charlie"
+	friendThreeAge := 12
 
-	// friendFourName := "Abby"
-	// friendFourAge := 24
+	friendFourName := "Abby"
+	friendFourAge := 24
 
-	// friendFiveName := "Edith"
-	// friendFiveAge := 74
-	
+	friendFiveName := "Edith"
+	friendFiveAge := 74
+
 	log.Printf("Hello World. My name is %s.", myName)
 
 	if myAge < 13 {
 		log.Println("I am considered a child")
-	} else if myAge >= 13 && myAge < 20 {
+	} else if myAge < 20 {
 		log.Println("I am considered a teenager")
-	} else if myAge >= 20 && myAge < 70 {
+	} else if myAge < 70 {
 		log.Println("I am considered an adult")
 	} else {
 		log.Println("I am considered a pensioner")
 	}
 
-	log.Println("I have two friends, and they are as follows:")
+	log.Println("I have five friends, and they are as follows:")
 
-	log.Printf("%s: ", friendOneName)
-
-	if friendOneAge < 13 {
-		log.Println("They are considered a child")
-	} else if friendOneAge >= 13 && friendOneAge < 20 {
-		log.Println("They are considered a teenager")
-	} else if friendOneAge >= 20 && friendOneAge < 70 {
-		log.Println("They are considered an adult")
-	} else {
-		log.Println("They are considered a pensioner")
-	}
-
-	log.Printf("%s: ", friendTwoName)
-
-	if friendTwoAge < 13 {
-		log.Println("They are considered a child")
-	} else if friendTwoAge >= 13 && friendTwoAge < 20 {
-		log.Println("They are considered a teenager")
-	} else if friendTwoAge >= 20 && friendTwoAge < 70 {
-		log.Println("They are considered an adult")
-	} else {
-		log.Println("They are considered a pensioner")
-	}
-
-
+	printAgeBracket(friendOneName, friendOneAge)
+	printAgeBracket(friendTwoName, friendTwoAge)
+	printAgeBracket(friendThreeName, friendThreeAge)
+	printAgeBracket(friendFourName, friendFourAge)
+	printAgeBracket(friendFiveName, friendFiveAge)
 
 	// End of our code
 
